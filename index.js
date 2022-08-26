@@ -1,8 +1,12 @@
 import fetch from 'node-fetch';
 import express from 'express';
+import cors from 'cors';
+
 
 const app = express();
 
+//middleware for cors so I share data with frontend
+app.use(cors());
 
 app.get('/', (req,res) =>
 {
