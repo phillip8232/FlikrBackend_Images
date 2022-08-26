@@ -13,7 +13,7 @@ app.get('/', (req,res) =>
         .then(json => json.replace('jsonFlickrFeed',''))
         //removing some random stuff to so i can make it a json
         .then(json => json.replace(/[\)(]/g,''))
-        //interpolate to string parse back to json format.
+        //string parse back to json format.
         .then(text => {
           const textJson = text;
           const obj = JSON.parse(textJson)
